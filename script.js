@@ -1,14 +1,14 @@
-        function insert_Row(){
-         
-            table=document.getElementById('sampleTable')
-             let newRow=document.createElement('tr')
-            let newCell = document.createElement('td'); 
-            let cell2=document.createElement('td')
-            newCell.textContent='New Cell1'
-            cell2.textContent='New Cell2'
-            newRow.appendChild(newCell)
-            newRow.appendChild(cell2)
-            table.prepend(newRow);
-          
-                
-                    }
+function insert_Row() {
+    let table = document.getElementById('sampleTable');
+    
+    // Create a new row
+    let newRow = table.insertRow(0); // Insert at the first position (top)
+
+    // Create two new cells
+    let newCell1 = newRow.insertCell(0);
+    let newCell2 = newRow.insertCell(1);
+
+    // Set text content for the cells
+    newCell1.textContent = 'New Cell1';
+    newCell2.textContent = 'New Cell2';
+}
